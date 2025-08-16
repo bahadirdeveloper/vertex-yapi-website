@@ -3,13 +3,16 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import Link from 'next/link'
-import { projects } from '@/data/projects'
+import { projects, Project } from '@/data/projects'
 import { MapPin, Calendar, Filter } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import ProjectModal from '@/components/ui/ProjectModal'
 
 export default function ProjectsPageClient() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [selectedStatus, setSelectedStatus] = useState<string>('all')
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
   const categories = [
     { value: 'all', label: 'Tümü' },
@@ -32,6 +35,16 @@ export default function ProjectsPageClient() {
     const statusMatch = selectedStatus === 'all' || project.status === selectedStatus
     return categoryMatch && statusMatch
   })
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedProject(null)
+  }
 
   return (
     <div className="min-h-screen">
@@ -177,11 +190,14 @@ export default function ProjectsPageClient() {
                       </div>
                     )}
                     
-                    <Link href={`/projeler/${project.id}`}>
-                      <button className="w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm">
-                        Detayları İncele
-                      </button>
-                    </Link>
+                    <Button 
+                      variant="default" 
+                      size="sm" 
+                      className="w-full font-semibold"
+                      onClick={() => handleProjectClick(project)}
+                    >
+                      Detayları İncele
+                    </Button>
                   </div>
                 </motion.div>
               ))}
@@ -243,6 +259,13 @@ export default function ProjectsPageClient() {
           </div>
         </div>
       </section>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   )
 }

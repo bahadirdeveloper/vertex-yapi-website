@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X, Phone, Mail } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { Button } from '@/components/ui/Button'
 
 const navigation = [
   { name: 'Ana Sayfa', href: '/' },
@@ -32,13 +33,14 @@ export default function Header() {
       {/* Top Bar - Koyu kahverengi şerit */}
       <div className={`header-top-bar transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`}>
         <div className="container-custom px-3 sm:px-4 lg:px-6">
-          <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-orange-300" />
-                <span>+90 540 384 33 33</span>
+          <div className="flex justify-between items-center text-xs sm:text-sm">
+            <div className="flex items-center space-x-2 sm:space-x-4">
+              <div className="flex items-center space-x-1 sm:space-x-2">
+                <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-orange-300" />
+                <span className="hidden xs:inline">+90 540 384 33 33</span>
+                <span className="xs:hidden">540 384 33 33</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="hidden sm:flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-orange-300" />
                 <span>info@vertexyapi.com</span>
               </div>
@@ -56,22 +58,22 @@ export default function Header() {
           <div className={`flex justify-between items-center py-2 transition-all duration-300 ${isScrolled ? 'h-16' : 'h-20 lg:h-24'}`}>
             {/* Logo */}
             <Link href="/" className="logo-container group">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-2 sm:space-x-3">
                 {/* Logo Image */}
                 <div className="relative">
                   <Image
-                    src="/logo.png"
+                    src="/logo.webp"
                     alt="Vertex Yapı İnşaat"
                     width={isScrolled ? 120 : 150}
                     height={isScrolled ? 40 : 50}
-                    className="transition-all duration-300 object-contain"
+                    className="transition-all duration-300 object-contain w-16 sm:w-20 lg:w-24"
                     priority
                   />
                 </div>
                 
                 {/* Logo Text */}
                 <div className="logo-text">
-                  <h1 className={`logo-title transition-all duration-300 ${isScrolled ? 'text-xl lg:text-2xl' : 'text-2xl lg:text-3xl'}`} style={{ textRendering: 'optimizeLegibility', WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
+                  <h1 className={`logo-title transition-all duration-300 ${isScrolled ? 'text-lg sm:text-xl lg:text-2xl' : 'text-xl sm:text-2xl lg:text-3xl'}`} style={{ textRendering: 'optimizeLegibility', WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
                     VERTEX YAPI
                   </h1>
                   <p className={`logo-subtitle transition-all duration-300 ${isScrolled ? 'text-xs' : 'text-xs lg:text-sm'}`} style={{ textRendering: 'optimizeLegibility', WebkitFontSmoothing: 'antialiased', MozOsxFontSmoothing: 'grayscale' }}>
@@ -97,9 +99,9 @@ export default function Header() {
             {/* CTA Button */}
             <div className="hidden lg:block">
               <Link href="/iletisim">
-                <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <Button size="sm" variant="default" className="font-semibold">
                   Teklif Alın
-                </button>
+                </Button>
               </Link>
             </div>
 
@@ -143,9 +145,9 @@ export default function Header() {
                   ))}
                   <div className="pt-2 border-t border-gray-100">
                     <Link href="/iletisim">
-                      <button className="w-full bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 rounded-lg font-semibold transition-all duration-300">
+                      <Button size="sm" variant="default" className="w-full font-semibold">
                         Teklif Alın
-                      </button>
+                      </Button>
                     </Link>
                   </div>
                 </div>

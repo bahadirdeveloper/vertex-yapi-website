@@ -1,13 +1,28 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { projects } from '@/data/projects'
+import { projects, Project } from '@/data/projects'
 import { MapPin, Calendar } from 'lucide-react'
+import { Button } from '@/components/ui/Button'
+import ProjectModal from '@/components/ui/ProjectModal'
 
 export default function ProjectsPreviewSection() {
   const featuredProjects = projects.slice(0, 3)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleProjectClick = (project: Project) => {
+    setSelectedProject(project)
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+    setSelectedProject(null)
+  }
 
   return (
     <section className="py-20 bg-white">
@@ -81,11 +96,14 @@ export default function ProjectsPreviewSection() {
                   </div>
                 )}
                 
-                <Link href={`/projeler/${project.id}`}>
-                  <button className="w-full btn-secondary text-sm">
-                    Detayları İncele
-                  </button>
-                </Link>
+                <Button 
+                  variant="secondary" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => handleProjectClick(project)}
+                >
+                  Detayları İncele
+                </Button>
               </div>
             </motion.div>
           ))}
@@ -99,12 +117,19 @@ export default function ProjectsPreviewSection() {
           className="text-center mt-12"
         >
                           <Link href="/projeler">
-                  <button className="bg-orange-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  <Button size="lg" variant="default" className="font-bold">
                     Tüm Projelerimizi İnceleyin
-                  </button>
+                  </Button>
                 </Link>
         </motion.div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </section>
   )
 }

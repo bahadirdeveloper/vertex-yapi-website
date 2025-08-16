@@ -131,21 +131,6 @@
 }
 
 @layer components {
-  .btn-primary {
-    @apply bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-inter;
-  }
-  
-  .btn-secondary {
-    @apply bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-inter;
-  }
-  
-  .btn-accent {
-    @apply bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-inter;
-  }
-  
-  .btn-outline {
-    @apply border-2 border-orange-500 text-orange-500 px-8 py-4 rounded-xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 transform hover:scale-105 font-inter;
-  }
   
   .section-padding {
     @apply py-20 px-4 sm:px-6 lg:px-8;
@@ -414,5 +399,58 @@
   /* Dark mode support (if needed in future) */
   @media (prefers-color-scheme: dark) {
     /* Dark mode styles can be added here */
+  }
+  
+  /* Mobile-specific optimizations */
+  @media (max-width: 640px) {
+    .text-responsive {
+      @apply text-sm;
+    }
+    
+    .spacing-mobile {
+      @apply space-y-4;
+    }
+    
+    .mobile-padding {
+      @apply px-4;
+    }
+  }
+  
+  /* Touch-friendly buttons for mobile */
+  @media (max-width: 768px) {
+    button, a {
+      @apply min-h-[44px] min-w-[44px];
+    }
+    
+    .touch-target {
+      @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+    }
+  }
+  
+  /* Extra small screens */
+  @media (max-width: 480px) {
+    .xs-text {
+      @apply text-xs;
+    }
+    
+    .xs-padding {
+      @apply px-3;
+    }
+  }
+  
+  /* Modal mobile optimizations */
+  @media (max-width: 640px) {
+    .modal-mobile {
+      @apply mx-2;
+    }
+    
+    .modal-content-mobile {
+      @apply text-sm;
+    }
+  }
+  
+  /* Prevent body scroll when modal is open */
+  .modal-open {
+    overflow: hidden;
   }
 }

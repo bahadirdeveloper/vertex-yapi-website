@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { services } from '@/data/services'
 import Link from 'next/link'
+import { Button } from '@/components/ui/Button'
 
 export default function ServicesSection() {
   return (
@@ -70,9 +71,9 @@ export default function ServicesSection() {
           className="text-center mt-16"
         >
           <Link href="/hizmetler">
-            <button className="bg-orange-500 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <Button size="lg" variant="default" className="font-bold">
               Tüm Hizmetlerimizi İnceleyin
-            </button>
+            </Button>
           </Link>
         </motion.div>
       </div>
