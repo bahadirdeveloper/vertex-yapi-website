@@ -164,6 +164,7 @@ export default function ProjectsPageClient() {
                       src={imageErrors.has(project.image) ? getFallbackImage() : project.image}
                       alt={project.title}
                       fill
+                      unoptimized
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={() => handleImageError(project.image)}
                       priority={index < 3}
