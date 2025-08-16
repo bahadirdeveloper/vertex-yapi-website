@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,6 +8,16 @@ import { Building, Award, Shield, Users, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 export default function AboutPreviewSection() {
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set())
+
+  const handleImageError = (imagePath: string) => {
+    setImageErrors(prev => new Set(prev).add(imagePath))
+  }
+
+  const getFallbackImage = () => {
+    return '/logo.webp' // Logo'yu fallback olarak kullan
+  }
+
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,10 +85,12 @@ export default function AboutPreviewSection() {
               <div className="space-y-3 sm:space-y-4">
                 <div className="relative h-32 sm:h-40 lg:h-48 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/projects/AKKUYU NÜKLEER SANTRAL GÜVENLİK YOLU/NEPT 9.2 GÜVENLİK YOLU/IMG_20220316_170321.webp"
+                    src={imageErrors.has('/projects/akkuyu-nukleer-santral-guvenlik-yolu/IMG_20220316_155357.webp') ? getFallbackImage() : '/projects/akkuyu-nukleer-santral-guvenlik-yolu/IMG_20220316_155357.webp'}
                     alt="Akkuyu Nükleer Santral"
                     fill
+                    unoptimized
                     className="object-cover"
+                    onError={() => handleImageError('/projects/akkuyu-nukleer-santral-guvenlik-yolu/IMG_20220316_155357.webp')}
                   />
                   <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-800 font-medium">
                     Nükleer Santral
@@ -85,10 +98,12 @@ export default function AboutPreviewSection() {
                 </div>
                 <div className="relative h-24 sm:h-28 lg:h-32 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/projects/İNÖNÜ ÜNVİVERSİTESİ AÇIK OLİMPİK HAVUZ/IMG_3920.webp"
+                    src={imageErrors.has('/projects/inonu-universitesi-acik-olimpik-havuz/IMG_3919.webp') ? getFallbackImage() : '/projects/inonu-universitesi-acik-olimpik-havuz/IMG_3919.webp'}
                     alt="Olimpik Havuz"
                     fill
+                    unoptimized
                     className="object-cover"
+                    onError={() => handleImageError('/projects/inonu-universitesi-acik-olimpik-havuz/IMG_3919.webp')}
                   />
                   <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-800 font-medium">
                     Spor Tesisi
@@ -98,10 +113,12 @@ export default function AboutPreviewSection() {
               <div className="space-y-3 sm:space-y-4 pt-6 sm:pt-8">
                 <div className="relative h-24 sm:h-28 lg:h-32 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/projects/MUDANYA GÜZELYALI 32 DERSLİK ORTAOKUL İNŞAATI/3-1.webp"
+                    src={imageErrors.has('/projects/mudanya-guzelyali-32-derslik-ortaokul/3-1.webp') ? getFallbackImage() : '/projects/mudanya-guzelyali-32-derslik-ortaokul/3-1.webp'}
                     alt="Okul Binası"
                     fill
+                    unoptimized
                     className="object-cover"
+                    onError={() => handleImageError('/projects/mudanya-guzelyali-32-derslik-ortaokul/3-1.webp')}
                   />
                   <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-800 font-medium">
                     Eğitim Kurumu
@@ -109,10 +126,12 @@ export default function AboutPreviewSection() {
                 </div>
                 <div className="relative h-32 sm:h-40 lg:h-48 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/projects/TÜBİTAK MAM BKTM BİNALARI İNŞAATI/TÜBİTAK.webp"
+                    src={imageErrors.has('/projects/tubitak-mam-bktm-binalari/TUBITAK.webp') ? getFallbackImage() : '/projects/tubitak-mam-bktm-binalari/TUBITAK.webp'}
                     alt="TÜBİTAK Araştırma Merkezi"
                     fill
+                    unoptimized
                     className="object-cover"
+                    onError={() => handleImageError('/projects/tubitak-mam-bktm-binalari/TUBITAK.webp')}
                   />
                   <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-800 font-medium">
                     Araştırma Merkezi
