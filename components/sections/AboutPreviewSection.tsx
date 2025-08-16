@@ -88,9 +88,10 @@ export default function AboutPreviewSection() {
                     src={imageErrors.has('/projects/akkuyu-nukleer-santral-guvenlik-yolu/IMG_20220316_155357.webp') ? getFallbackImage() : '/projects/akkuyu-nukleer-santral-guvenlik-yolu/IMG_20220316_155357.webp'}
                     alt="Akkuyu Nükleer Santral"
                     fill
-                    unoptimized
                     className="object-cover"
                     onError={() => handleImageError('/projects/akkuyu-nukleer-santral-guvenlik-yolu/IMG_20220316_155357.webp')}
+                    priority={true}
+                    sizes="(max-width: 768px) 50vw, 25vw"
                   />
                   <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-800 font-medium">
                     Nükleer Santral
@@ -101,9 +102,9 @@ export default function AboutPreviewSection() {
                     src={imageErrors.has('/projects/inonu-universitesi-acik-olimpik-havuz/IMG_3919.webp') ? getFallbackImage() : '/projects/inonu-universitesi-acik-olimpik-havuz/IMG_3919.webp'}
                     alt="Olimpik Havuz"
                     fill
-                    unoptimized
                     className="object-cover"
                     onError={() => handleImageError('/projects/inonu-universitesi-acik-olimpik-havuz/IMG_3919.webp')}
+                    sizes="(max-width: 768px) 50vw, 25vw"
                   />
                   <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-800 font-medium">
                     Spor Tesisi
@@ -116,9 +117,9 @@ export default function AboutPreviewSection() {
                     src={imageErrors.has('/projects/mudanya-guzelyali-32-derslik-ortaokul/3-1.webp') ? getFallbackImage() : '/projects/mudanya-guzelyali-32-derslik-ortaokul/3-1.webp'}
                     alt="Okul Binası"
                     fill
-                    unoptimized
                     className="object-cover"
                     onError={() => handleImageError('/projects/mudanya-guzelyali-32-derslik-ortaokul/3-1.webp')}
+                    sizes="(max-width: 768px) 50vw, 25vw"
                   />
                   <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-800 font-medium">
                     Eğitim Kurumu
@@ -129,9 +130,9 @@ export default function AboutPreviewSection() {
                     src={imageErrors.has('/projects/tubitak-mam-bktm-binalari/TUBITAK.webp') ? getFallbackImage() : '/projects/tubitak-mam-bktm-binalari/TUBITAK.webp'}
                     alt="TÜBİTAK Araştırma Merkezi"
                     fill
-                    unoptimized
                     className="object-cover"
                     onError={() => handleImageError('/projects/tubitak-mam-bktm-binalari/TUBITAK.webp')}
+                    sizes="(max-width: 768px) 50vw, 25vw"
                   />
                   <div className="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-2 py-1 rounded text-xs text-gray-800 font-medium">
                     Araştırma Merkezi

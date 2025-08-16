@@ -67,10 +67,10 @@ export default function ProjectsPreviewSection() {
                   src={imageErrors.has(project.image) ? getFallbackImage() : project.image}
                   alt={project.title}
                   fill
-                  unoptimized
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                   onError={() => handleImageError(project.image)}
-                  priority={index < 2}
+                  priority={index === 0} // Sadece ilk görsel priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-4 right-4 bg-accent text-secondary px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm">

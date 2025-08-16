@@ -164,10 +164,10 @@ export default function ProjectsPageClient() {
                       src={imageErrors.has(project.image) ? getFallbackImage() : project.image}
                       alt={project.title}
                       fill
-                      unoptimized
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={() => handleImageError(project.image)}
                       priority={index < 3}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                     <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {project.status === 'tamamlandi' ? 'Tamamlandı' : 'Devam Ediyor'}

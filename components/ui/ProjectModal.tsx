@@ -134,9 +134,9 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                     src={imageErrors.has(project.images[currentImageIndex]) ? getFallbackImage() : project.images[currentImageIndex]}
                     alt={`${project.title} - Görsel ${currentImageIndex + 1}`}
                     fill
-                    unoptimized
                     className="object-cover"
                     onError={() => handleImageError(project.images[currentImageIndex])}
+                    sizes="(max-width: 768px) 100vw, 80vw"
                   />
                 </motion.div>
               </AnimatePresence>
@@ -235,7 +235,6 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                           src={imageErrors.has(image) ? getFallbackImage() : image}
                           alt={`${project.title} - Thumbnail ${index + 1}`}
                           fill
-                          unoptimized
                           className="object-cover"
                           onError={() => handleImageError(image)}
                         />
