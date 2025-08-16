@@ -1,0 +1,325 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 5.9% 25%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-inter;
+    line-height: 1.6;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-variation-settings: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Typography Hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold tracking-tight;
+    line-height: 1.2;
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold;
+    letter-spacing: -0.02em;
+  }
+  
+  h2 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold;
+    letter-spacing: -0.01em;
+  }
+  
+  h3 {
+    @apply text-2xl sm:text-3xl font-semibold;
+  }
+  
+  h4 {
+    @apply text-xl sm:text-2xl font-semibold;
+  }
+  
+  h5 {
+    @apply text-lg sm:text-xl font-medium;
+  }
+  
+  h6 {
+    @apply text-base sm:text-lg font-medium;
+  }
+  
+  p {
+    @apply font-inter leading-relaxed;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-orange-500 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-orange-600;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-inter;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-inter;
+  }
+  
+  .btn-accent {
+    @apply bg-orange-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl font-inter;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-orange-500 text-orange-500 px-8 py-4 rounded-xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 transform hover:scale-105 font-inter;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100;
+    backdrop-filter: blur(10px);
+  }
+  
+  .card-hover {
+    @apply hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700;
+  }
+  
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+  
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Font Utility Classes */
+  .font-display {
+    @apply font-poppins;
+  }
+  
+  .font-body {
+    @apply font-inter;
+  }
+  
+  .font-brand {
+    @apply font-montserrat;
+  }
+  
+  /* Header Styles */
+  .header-sticky {
+    @apply sticky top-0 z-50;
+  }
+  
+  .header-scrolled {
+    @apply bg-white/95 backdrop-blur-md shadow-lg;
+  }
+  
+  .header-top-bar {
+    @apply bg-amber-900 text-white;
+  }
+  
+  .header-main {
+    @apply bg-white shadow-lg border-b border-gray-100;
+  }
+  
+  /* Logo Styles */
+  .logo-container {
+    @apply flex items-center space-x-3;
+  }
+  
+  .logo-text {
+    @apply flex flex-col;
+  }
+  
+  .logo-title {
+    @apply text-2xl lg:text-3xl font-bold text-gray-800 transition-colors duration-300 font-montserrat font-black tracking-wider;
+    letter-spacing: 0.1em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+  
+  .group:hover .logo-title {
+    @apply text-orange-600;
+  }
+  
+  .logo-subtitle {
+    @apply text-xs lg:text-sm text-gray-500 font-medium font-inter tracking-wide;
+    letter-spacing: 0.05em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+  
+  /* Navigation Styles */
+  .nav-link {
+    @apply px-3 py-2 text-gray-600 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-all duration-200 font-medium text-sm lg:text-base relative font-inter;
+    letter-spacing: 0.01em;
+  }
+  
+  .nav-link::after {
+    @apply absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-orange-500 transition-all duration-300;
+    content: '';
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  /* Animation classes */
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.5s ease-out;
+  }
+  
+  /* Keyframes */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(30px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  @keyframes scaleIn {
+    from { 
+      opacity: 0; 
+      transform: scale(0.9); 
+    }
+    to { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+  }
+  
+  /* Enhanced visual effects */
+  .animated-bg {
+    background: linear-gradient(-45deg, #f97316, #ea580c, #dc2626, #b91c1c);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Responsive improvements */
+  @media (max-width: 640px) {
+    .section-padding {
+      @apply py-12 px-4;
+    }
+    
+    h1 {
+      @apply text-3xl;
+    }
+    
+    h2 {
+      @apply text-2xl;
+    }
+  }
+}
