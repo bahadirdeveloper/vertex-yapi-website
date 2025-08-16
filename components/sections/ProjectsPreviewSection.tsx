@@ -13,6 +13,7 @@ export default function ProjectsPreviewSection() {
   const featuredProjects = projects.slice(0, 3)
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set())
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project)
@@ -22,6 +23,14 @@ export default function ProjectsPreviewSection() {
   const handleCloseModal = () => {
     setIsModalOpen(false)
     setSelectedProject(null)
+  }
+
+  const handleImageError = (imagePath: string) => {
+    setImageErrors(prev => new Set(prev).add(imagePath))
+  }
+
+  const getFallbackImage = () => {
+    return '/logo.webp' // Logo'yu fallback olarak kullan
   }
 
   return (
@@ -55,10 +64,13 @@ export default function ProjectsPreviewSection() {
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
-                  src={project.image}
+                  src={imageErrors.has(project.image) ? getFallbackImage() : project.image}
                   alt={project.title}
                   fill
+                  unoptimized
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  onError={() => handleImageError(project.image)}
+                  priority={index < 2}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute top-4 right-4 bg-accent text-secondary px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm">
