@@ -1,0 +1,27 @@
+{
+  "name": "Vertex Yapı İnşaat",
+  "short_name": "Vertex Yapı",
+  "description": "Mersin Silifke'de fabrika, hastane, okul, otel, nükleer santral ve ticari yapılar inşa eden inşaat firması",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "construction"],
+  "lang": "tr",
+  "dir": "ltr"
+}
