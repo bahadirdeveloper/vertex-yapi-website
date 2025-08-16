@@ -13,6 +13,7 @@ export default function ProjectsPageClient() {
   const [selectedStatus, setSelectedStatus] = useState<string>('all')
   const [selectedProject, setSelectedProject] = useState<Project | null>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set())
 
   const categories = [
     { value: 'all', label: 'Tümü' },
@@ -44,6 +45,14 @@ export default function ProjectsPageClient() {
   const handleCloseModal = () => {
     setIsModalOpen(false)
     setSelectedProject(null)
+  }
+
+  const handleImageError = (imagePath: string) => {
+    setImageErrors(prev => new Set(prev).add(imagePath))
+  }
+
+  const getFallbackImage = () => {
+    return '/logo.webp' // Logo'yu fallback olarak kullan
   }
 
   return (
@@ -152,10 +161,12 @@ export default function ProjectsPageClient() {
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
-                      src={project.image}
+                      src={imageErrors.has(project.image) ? getFallbackImage() : project.image}
                       alt={project.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={() => handleImageError(project.image)}
+                      priority={index < 3}
                     />
                     <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {project.status === 'tamamlandi' ? 'Tamamlandı' : 'Devam Ediyor'}

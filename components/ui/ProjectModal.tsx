@@ -14,11 +14,13 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set())
 
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add('modal-open')
       setCurrentImageIndex(0) // Reset to first image when modal opens
+      setImageErrors(new Set()) // Reset image errors
     } else {
       document.body.classList.remove('modal-open')
     }
@@ -55,6 +57,14 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
     if (currentImageIndex > 0) {
       setCurrentImageIndex(currentImageIndex - 1)
     }
+  }
+
+  const handleImageError = (imagePath: string) => {
+    setImageErrors(prev => new Set(prev).add(imagePath))
+  }
+
+  const getFallbackImage = () => {
+    return '/logo.webp' // Logo'yu fallback olarak kullan
   }
 
   if (!project) return null
@@ -121,10 +131,11 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                   className="relative w-full h-full"
                 >
                   <Image
-                    src={project.images[currentImageIndex]}
+                    src={imageErrors.has(project.images[currentImageIndex]) ? getFallbackImage() : project.images[currentImageIndex]}
                     alt={`${project.title} - Görsel ${currentImageIndex + 1}`}
                     fill
                     className="object-cover"
+                    onError={() => handleImageError(project.images[currentImageIndex])}
                   />
                 </motion.div>
               </AnimatePresence>
@@ -220,10 +231,11 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                         }`}
                       >
                         <Image
-                          src={image}
+                          src={imageErrors.has(image) ? getFallbackImage() : image}
                           alt={`${project.title} - Thumbnail ${index + 1}`}
                           fill
                           className="object-cover"
+                          onError={() => handleImageError(image)}
                         />
                         {currentImageIndex === index && (
                           <div className="absolute inset-0 bg-orange-500/20 flex items-center justify-center">
