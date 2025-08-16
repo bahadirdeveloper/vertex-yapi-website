@@ -89,7 +89,7 @@ export default function AboutPage() {
               className="relative"
             >
               <Image
-                src="/projects/AKKUYU NÜKLEER SANTRAL GÜVENLİK YOLU/NEPT 9.2 GÜVENLİK YOLU/IMG_20220316_170321.jpg"
+                src="/projects/AKKUYU NÜKLEER SANTRAL GÜVENLİK YOLU/NEPT 9.2 GÜVENLİK YOLU/IMG_20220316_170321.webp"
                 alt="Vertex Yapı İnşaat - Akkuyu Nükleer Santral Projesi"
                 width={600}
                 height={400}

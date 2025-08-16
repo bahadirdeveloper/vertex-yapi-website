@@ -73,7 +73,7 @@ export default function AboutPreviewSection() {
               <div className="space-y-4">
                 <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/projects/AKKUYU NÜKLEER SANTRAL GÜVENLİK YOLU/NEPT 9.2 GÜVENLİK YOLU/IMG_20220316_170321.jpg"
+                    src="/projects/AKKUYU NÜKLEER SANTRAL GÜVENLİK YOLU/NEPT 9.2 GÜVENLİK YOLU/IMG_20220316_170321.webp"
                     alt="Akkuyu Nükleer Santral"
                     fill
                     className="object-cover"
