@@ -1,10 +1,21 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { Award, Users, Target, Eye, Building, Clock, Shield, Zap, MapPin, Phone, Mail } from 'lucide-react'
 
 export default function AboutPageClient() {
+  const [imageError, setImageError] = useState(false)
+
+  const handleImageError = () => {
+    setImageError(true)
+  }
+
+  const getFallbackImage = () => {
+    return '/logo.webp' // Logo'yu fallback olarak kullan
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -89,11 +100,14 @@ export default function AboutPageClient() {
               className="relative"
             >
               <Image
-                src="/projects/AKKUYU NÜKLEER SANTRAL GÜVENLİK YOLU/NEPT 9.2 GÜVENLİK YOLU/IMG_20220316_170321.webp"
+                src={imageError ? getFallbackImage() : '/projects/akkuyu-nukleer-santral-guvenlik-yolu/IMG_20220316_155357.webp'}
                 alt="Vertex Yapı İnşaat - Akkuyu Nükleer Santral Projesi"
                 width={600}
                 height={400}
                 className="rounded-lg shadow-lg"
+                onError={handleImageError}
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-gray-800 font-medium">
                 Akkuyu Nükleer Santral Güvenlik Yolu
