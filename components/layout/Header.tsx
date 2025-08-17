@@ -37,8 +37,8 @@ export default function Header() {
             <div className="flex items-center space-x-2 sm:space-x-4">
               <div className="flex items-center space-x-1 sm:space-x-2">
                 <Phone className="h-3 w-3 sm:h-4 sm:w-4 text-orange-300" />
-                <span className="hidden xs:inline">+90 540 384 33 33</span>
-                <span className="xs:hidden">540 384 33 33</span>
+                <span className="hidden xs:inline">+90 543 977 74 78</span>
+                <span className="xs:hidden">543 977 74 78</span>
               </div>
               <div className="hidden sm:flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-orange-300" />
@@ -64,9 +64,9 @@ export default function Header() {
                   <Image
                     src="/logo.webp"
                     alt="Vertex Yapı İnşaat"
-                    width={isScrolled ? 120 : 150}
-                    height={isScrolled ? 40 : 50}
-                    className="transition-all duration-300 object-contain w-16 sm:w-20 lg:w-24"
+                    width={isScrolled ? 180 : 220}
+                    height={isScrolled ? 70 : 80}
+                    className="transition-all duration-300 object-contain w-24 sm:w-32 lg:w-36"
                     priority
                   />
                 </div>

@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Award, Users, Target, Eye, Building, Clock, Shield, Zap, MapPin, Phone, Mail } from 'lucide-react'
+import { Award, Users, Target, Eye, Building, Clock, Shield, Zap, MapPin, Phone, Mail, Instagram } from 'lucide-react'
 
 export default function AboutPageClient() {
   const [imageError, setImageError] = useState(false)
@@ -31,7 +31,7 @@ export default function AboutPageClient() {
               Hakkımızda
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              Vertex Yapı İnşaat olarak, nükleer santralden spor tesislerine kadar geniş bir yelpazede kaliteli projeler üretiyoruz.
+              Kaba inşaat, altyapı ve nükleer tesis projelerinde uzmanlaşmış, kalite, güvenlik ve sürdürülebilirlik ilkelerini benimseyen bir mühendislik şirketi.
             </p>
           </motion.div>
         </div>
@@ -51,14 +51,19 @@ export default function AboutPageClient() {
                 Vertex Yapı İnşaat
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Vertex Yapı İnşaat Sanayi ve Ticaret Limited Şirketi, Türkiye'nin önde gelen 
-                inşaat firmalarından biridir. Nükleer santral projelerinden eğitim kurumlarına, 
-                spor tesislerinden araştırma merkezlerine kadar geniş bir yelpazede hizmet vermekteyiz.
+                Firmamız; kaba inşaat, altyapı ve nükleer tesis projelerinde uzmanlaşmış, kalite, güvenlik ve sürdürülebilirlik ilkelerini benimseyen bir mühendislik şirketidir.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Akkuyu Nükleer Santral projeleri, TÜBİTAK araştırma merkezleri, üniversite 
-                spor tesisleri, okul binaları ve TOKİ konut projeleri gibi kritik altyapı 
-                projelerinde uzmanlaşmış durumdayız.
+                Kurulduğumuz günden bu yana, güçlü mühendislik altyapımız ve deneyimli kadromuz ile güvenli, sağlam ve modern yapılar inşa etmeyi hedefledik. Yalnızca binalar değil, aynı zamanda geleceğe bırakılacak kalıcı değerler üretiyoruz.
+              </p>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Kaba inşaat ve kritik altyapı projeleri, titizlik ve uzmanlık gerektirir. Bu bilinçle; uluslararası standartlara uygun çözümler sunuyoruz, zamanında teslim prensibiyle çalışıyoruz, çalışan güvenliği ve çevre duyarlılığını ön planda tutuyoruz.
+              </p>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Bugün geldiğimiz noktada, sadece bir inşaat firması değil; aynı zamanda teknoloji, mühendislik ve güveni birleştiren bir çözüm ortağı olarak anılmaktan gurur duyuyoruz.
+              </p>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Amacımız, her projede en yüksek kaliteyi yakalamak, güvenilirliğimizi pekiştirmek ve ülkemizin geleceğine sağlam temeller bırakmaktır.
               </p>
               
               {/* İletişim Bilgileri */}
@@ -67,7 +72,7 @@ export default function AboutPageClient() {
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-600">
                     <Phone className="w-4 h-4 mr-3 text-orange-500" />
-                    <span>540 384 33 33</span>
+                    <span>0543 977 74 78</span>
                   </div>
                   <div className="flex items-center text-gray-600">
                     <MapPin className="w-4 h-4 mr-3 text-orange-500" />
@@ -76,6 +81,12 @@ export default function AboutPageClient() {
                   <div className="flex items-center text-gray-600">
                     <Mail className="w-4 h-4 mr-3 text-orange-500" />
                     <span>info@vertexyapi.com</span>
+                  </div>
+                  <div className="flex items-center text-gray-600">
+                    <Instagram className="w-4 h-4 mr-3 text-orange-500" />
+                    <a href="https://www.instagram.com/vertex_yapi/" target="_blank" rel="noopener noreferrer" className="hover:text-orange-600 transition-colors">
+                      @vertex_yapi
+                    </a>
                   </div>
                 </div>
               </div>
@@ -133,11 +144,14 @@ export default function AboutPageClient() {
                 <Target className="w-8 h-8 text-orange-500 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-800">Misyonumuz</h3>
               </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Güvenli, sağlam ve modern yapılar inşa ederek ülkemizin geleceğine değer katıyoruz.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Kaba inşaat ve nükleer tesis altyapılarında; uluslararası standartlara uygun, çevreye duyarlı ve yenilikçi çözümler üretiyoruz.
+              </p>
               <p className="text-gray-600 leading-relaxed">
-                Nükleer santral, eğitim, spor ve araştırma tesisleri gibi kritik altyapı 
-                projelerinde en yüksek güvenlik ve kalite standartlarını sağlamak. 
-                Müşterilerimizin ihtiyaçlarını zamanında ve bütçeye uygun şekilde 
-                karşılayarak, Türkiye'nin gelişimine katkıda bulunmak.
+                Her projede iş güvenliği, kalite ve mühendislik disiplininden ödün vermeden, kalıcı eserler bırakmayı hedefliyoruz.
               </p>
             </motion.div>
 
@@ -153,19 +167,136 @@ export default function AboutPageClient() {
                 <Eye className="w-8 h-8 text-orange-500 mr-3" />
                 <h3 className="text-2xl font-bold text-gray-800">Vizyonumuz</h3>
               </div>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Türkiye'de ve dünyada, kaba inşaat ve nükleer enerji altyapısında güvenilir çözüm ortağı olarak öne çıkmak.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                Teknoloji ve mühendisliği birleştirerek, geleceğin enerji ve yapı ihtiyaçlarına güvenle yanıt vermek.
+              </p>
               <p className="text-gray-600 leading-relaxed">
-                Türkiye'nin kritik altyapı projelerinde güvenilir partner olarak, 
-                nükleer enerji, eğitim ve spor alanlarında öncü bir inşaat firması 
-                haline gelmek. Teknoloji ve mühendislik bilgimizi kullanarak 
-                geleceğin standartlarını bugünden inşa etmek.
+                Sürdürülebilirlik, kalite ve güven ilkeleriyle, gelecek nesillere değer katan yapılar sunmak.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
+      {/* Values */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
+              Değerlerimiz
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Çalışma prensiplerimizi oluşturan temel değerlerimiz
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Kalite */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-gray-50 p-6 rounded-lg"
+            >
+              <div className="text-center mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white rounded-full mb-4">
+                  <Award className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Kalite</h3>
+              </div>
+              <div className="space-y-3 text-sm text-gray-600">
+                <p>• Bizim için kalite, sadece bitmiş yapının sağlamlığı değil; sürecin her aşamasında gösterilen titizliktir.</p>
+                <p>• Uluslararası standartlar çerçevesinde çalışırız.</p>
+                <p>• Malzeme seçiminden işçiliğe kadar en yüksek kaliteyi hedefleriz.</p>
+                <p>• Her projede sıfır hata, maksimum güvenlik anlayışıyla hareket ederiz.</p>
+                <p>• Kaliteyi, sürdürülebilirliğin ve güvenilirliğin temeli olarak görürüz.</p>
+              </div>
+            </motion.div>
+
+            {/* Güvenlik */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-gray-50 p-6 rounded-lg"
+            >
+              <div className="text-center mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white rounded-full mb-4">
+                  <Shield className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Güvenlik</h3>
+              </div>
+              <div className="space-y-3 text-sm text-gray-600">
+                <p>• Güvenlik, tüm çalışmalarımızın temelini oluşturur.</p>
+                <p>• Çalışanlarımızın sağlığı ve iş güvenliği, her şeyin önündedir.</p>
+                <p>• Tüm projelerimizde uluslararası güvenlik standartlarını uygularız.</p>
+                <p>• Nükleer tesisler ve kritik altyapılarda, en üst seviye güvenlik protokollerini benimseriz.</p>
+                <p>• Güvenliği, yalnızca bir zorunluluk değil, sorumluluk ve kültür olarak görürüz.</p>
+              </div>
+            </motion.div>
+
+            {/* Zamanında Teslim */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-gray-50 p-6 rounded-lg"
+            >
+              <div className="text-center mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white rounded-full mb-4">
+                  <Clock className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Zamanında Teslim</h3>
+              </div>
+              <div className="space-y-3 text-sm text-gray-600">
+                <p>• Projelerimizi söz verdiğimiz tarihte tamamlamayı, en az kalite ve güvenlik kadar önemsiyoruz.</p>
+                <p>• Planlama ve disiplinli çalışma ile süreçlerimizi en verimli şekilde yönetiriz.</p>
+                <p>• Kaynaklarımızı doğru kullanarak, işlerin aksamadan ilerlemesini sağlarız.</p>
+                <p>• Zamanında teslimi, müşteri memnuniyetinin ve güvenin temeli olarak kabul ederiz.</p>
+                <p>• Her projede "doğru iş, doğru zaman, doğru sonuç" anlayışıyla hareket ederiz.</p>
+              </div>
+            </motion.div>
+
+            {/* Uzmanlık */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="bg-gray-50 p-6 rounded-lg"
+            >
+              <div className="text-center mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white rounded-full mb-4">
+                  <Users className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Uzmanlık</h3>
+              </div>
+              <div className="space-y-3 text-sm text-gray-600">
+                <p>• Deneyimli ekip ve uzman kadro ile çalışmak.</p>
+                <p>• Nükleer tesisler ve kritik altyapı projelerinde özel uzmanlık.</p>
+                <p>• Sürekli eğitim ve teknoloji takibi ile kendimizi geliştiriyoruz.</p>
+                <p>• Mühendislik disiplinini her projede uyguluyoruz.</p>
+                <p>• Uzmanlığımızı sürekli artırarak müşterilerimize en iyi hizmeti sunuyoruz.</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Specializations */}
-      <section className="section-padding">
+      <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -221,70 +352,6 @@ export default function AboutPageClient() {
                 </h3>
                 <p className="text-gray-600 text-sm">
                   {specialization.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
-              Değerlerimiz
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Çalışma prensiplerimizi oluşturan temel değerlerimiz
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                icon: Award,
-                title: 'Kalite',
-                description: 'En yüksek kalite standartlarında hizmet sunmak'
-              },
-              {
-                icon: Shield,
-                title: 'Güvenlik',
-                description: 'Özellikle nükleer projelerde maksimum güvenlik'
-              },
-              {
-                icon: Clock,
-                title: 'Zamanında Teslim',
-                description: 'Projeleri söz verilen sürede tamamlamak'
-              },
-              {
-                icon: Users,
-                title: 'Uzmanlık',
-                description: 'Deneyimli ekip ve uzman kadro ile çalışmak'
-              }
-            ].map((value, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center group"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-500 text-white rounded-full mb-4 group-hover:bg-orange-600 transition-colors duration-300">
-                  <value.icon className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  {value.description}
                 </p>
               </motion.div>
             ))}

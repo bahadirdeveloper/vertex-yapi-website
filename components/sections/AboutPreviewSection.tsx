@@ -32,9 +32,8 @@ export default function AboutPreviewSection() {
               Vertex Yapı İnşaat
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-              Türkiye'nin kritik altyapı projelerinde güvenilir partner olarak, 
-              nükleer santralden spor tesislerine kadar geniş bir yelpazede 
-              kaliteli projeler üretiyoruz.
+              Firmamız; kaba inşaat, altyapı ve nükleer tesis projelerinde uzmanlaşmış, 
+              kalite, güvenlik ve sürdürülebilirlik ilkelerini benimseyen bir mühendislik şirketidir.
             </p>
             
             <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">

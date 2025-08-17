@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function WhatsAppButton() {
   const handleClick = () => {
-    window.open('tel:+905403843333', '_self')
+    window.open('tel:+905439777478', '_self')
   }
 
   return (

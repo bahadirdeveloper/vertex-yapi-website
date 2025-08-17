@@ -62,10 +62,10 @@ export default function ContactPageClient() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">Telefon</h3>
                     <a
-                      href="tel:+905403843333"
+                      href="tel:+905439777478"
                       className="text-gray-600 hover:text-orange-600 transition-colors"
                     >
-                      +90 540 384 33 33
+                      +90 543 977 74 78
                     </a>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function ContactPageClient() {
                 </h3>
                 <div className="space-y-3">
                   <a
-                    href="tel:+905403843333"
+                    href="tel:+905439777478"
                     className="flex items-center space-x-3 text-orange-600 hover:text-orange-700 transition-colors"
                   >
                     <Phone className="w-5 h-5" />

@@ -32,7 +32,7 @@ export default function Footer() {
             
             <div className="flex space-x-3 sm:space-x-4">
               <a
-                href="tel:+905403843333"
+                href="tel:+905439777478"
                 className="w-8 h-8 sm:w-10 sm:h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-colors"
               >
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -50,7 +50,9 @@ export default function Footer() {
                 <Facebook className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/vertex_yapi/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
               >
                 <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -98,10 +100,10 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-orange-400 flex-shrink-0" />
                 <a
-                  href="tel:+905403843333"
+                  href="tel:+905439777478"
                   className="text-gray-300 hover:text-orange-400 transition-colors text-sm font-medium"
                 >
-                  +90 540 384 33 33
+                  +90 543 977 74 78
                 </a>
               </div>
               <div className="flex items-center space-x-3">
