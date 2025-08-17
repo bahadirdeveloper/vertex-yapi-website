@@ -31,7 +31,7 @@ export default function AboutPageClient() {
               Hakkımızda
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              Kaba inşaat, altyapı ve nükleer tesis projelerinde uzmanlaşmış, kalite, güvenlik ve sürdürülebilirlik ilkelerini benimseyen bir mühendislik şirketi.
+              Kaba inşaat alanında uzmanlaşmış, üst yapı projelerinde güçlü teknik kadrosu ve modern uygulama yöntemleriyle güvenli ve sağlam yapılar inşa eden bir mühendislik firması.
             </p>
           </motion.div>
         </div>
@@ -51,19 +51,35 @@ export default function AboutPageClient() {
                 Vertex Yapı İnşaat
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Firmamız; kaba inşaat, altyapı ve nükleer tesis projelerinde uzmanlaşmış, kalite, güvenlik ve sürdürülebilirlik ilkelerini benimseyen bir mühendislik şirketidir.
+                Vertex Yapı İnşaat, kaba inşaat alanında uzmanlaşmış bir mühendislik firmasıdır. Özellikle üst yapı projelerinde (konutlar, hastaneler, eğitim kurumları, ticari yapılar ve sosyal tesisler) güçlü teknik kadromuz ve modern uygulama yöntemlerimizle güvenli ve sağlam yapılar inşa ediyoruz.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Kurulduğumuz günden bu yana, güçlü mühendislik altyapımız ve deneyimli kadromuz ile güvenli, sağlam ve modern yapılar inşa etmeyi hedefledik. Yalnızca binalar değil, aynı zamanda geleceğe bırakılacak kalıcı değerler üretiyoruz.
+                Bizim için kaba inşaat; sadece kolon, kiriş ve döşeme yapmak değil, yapının tüm geleceğini şekillendiren iskeleti kurmaktır. Bu bilinçle;
+              </p>
+              <ul className="text-gray-600 mb-6 leading-relaxed space-y-2">
+                <li>• Temelden çatıya kadar olan tüm taşıyıcı sistemlerde uluslararası standartlara uygunluk,</li>
+                <li>• Projelerde zamanında teslim ve yüksek kalite,</li>
+                <li>• Güvenlik ve mühendislik disiplininden taviz vermeme</li>
+              </ul>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                ilkeleriyle hareket ediyoruz.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Kaba inşaat ve kritik altyapı projeleri, titizlik ve uzmanlık gerektirir. Bu bilinçle; uluslararası standartlara uygun çözümler sunuyoruz, zamanında teslim prensibiyle çalışıyoruz, çalışan güvenliği ve çevre duyarlılığını ön planda tutuyoruz.
+                Bugüne kadar; konut projelerinden spor tesislerine, eğitim binalarından sağlık yapılarının kaba inşaatına kadar pek çok üst yapı projesinde imzamızı attık. Deneyimimiz ve uzmanlığımızla, kaba inşaatı sadece bir iş değil, geleceğe bırakılan en sağlam temel olarak görüyoruz.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Bugün geldiğimiz noktada, sadece bir inşaat firması değil; aynı zamanda teknoloji, mühendislik ve güveni birleştiren bir çözüm ortağı olarak anılmaktan gurur duyuyoruz.
+                Vertex Yapı İnşaat, üst yapıların kaba inşaatında;
+              </p>
+              <ul className="text-gray-600 mb-6 leading-relaxed space-y-2">
+                <li>• Dayanıklılığı,</li>
+                <li>• Güvenliği,</li>
+                <li>• Zamanında teslimi</li>
+              </ul>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                bir arada sunar.
               </p>
               <p className="text-gray-600 mb-6 leading-relaxed">
-                Amacımız, her projede en yüksek kaliteyi yakalamak, güvenilirliğimizi pekiştirmek ve ülkemizin geleceğine sağlam temeller bırakmaktır.
+                Her projemizde "Güçlü temel, sağlam gelecek" anlayışıyla hareket ediyor, ülkemizin yapı sektöründe güvenin adı olmaktan gurur duyuyoruz.
               </p>
               
               {/* İletişim Bilgileri */}
@@ -199,7 +215,7 @@ export default function AboutPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {/* Kalite */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -214,7 +230,7 @@ export default function AboutPageClient() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Kalite</h3>
               </div>
-              <div className="space-y-3 text-sm text-gray-600">
+              <div className="space-y-3 text-sm text-gray-600 text-left">
                 <p>• Bizim için kalite, sadece bitmiş yapının sağlamlığı değil; sürecin her aşamasında gösterilen titizliktir.</p>
                 <p>• Uluslararası standartlar çerçevesinde çalışırız.</p>
                 <p>• Malzeme seçiminden işçiliğe kadar en yüksek kaliteyi hedefleriz.</p>
@@ -237,7 +253,7 @@ export default function AboutPageClient() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Güvenlik</h3>
               </div>
-              <div className="space-y-3 text-sm text-gray-600">
+              <div className="space-y-3 text-sm text-gray-600 text-left">
                 <p>• Güvenlik, tüm çalışmalarımızın temelini oluşturur.</p>
                 <p>• Çalışanlarımızın sağlığı ve iş güvenliği, her şeyin önündedir.</p>
                 <p>• Tüm projelerimizde uluslararası güvenlik standartlarını uygularız.</p>
@@ -260,7 +276,7 @@ export default function AboutPageClient() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Zamanında Teslim</h3>
               </div>
-              <div className="space-y-3 text-sm text-gray-600">
+              <div className="space-y-3 text-sm text-gray-600 text-left">
                 <p>• Projelerimizi söz verdiğimiz tarihte tamamlamayı, en az kalite ve güvenlik kadar önemsiyoruz.</p>
                 <p>• Planlama ve disiplinli çalışma ile süreçlerimizi en verimli şekilde yönetiriz.</p>
                 <p>• Kaynaklarımızı doğru kullanarak, işlerin aksamadan ilerlemesini sağlarız.</p>
@@ -283,7 +299,7 @@ export default function AboutPageClient() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-3">Uzmanlık</h3>
               </div>
-              <div className="space-y-3 text-sm text-gray-600">
+              <div className="space-y-3 text-sm text-gray-600 text-left">
                 <p>• Deneyimli ekip ve uzman kadro ile çalışmak.</p>
                 <p>• Nükleer tesisler ve kritik altyapı projelerinde özel uzmanlık.</p>
                 <p>• Sürekli eğitim ve teknoloji takibi ile kendimizi geliştiriyoruz.</p>
@@ -313,7 +329,7 @@ export default function AboutPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               {
                 icon: Building,
@@ -361,3 +377,4 @@ export default function AboutPageClient() {
     </div>
   )
 }
+

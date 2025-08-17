@@ -132,12 +132,12 @@ export default function Header() {
                 transition={{ duration: 0.3 }}
                 className="md:hidden"
               >
-                <div className="px-2 pt-2 pb-4 space-y-1 bg-white border-t border-gray-100 rounded-b-lg shadow-lg">
+                <div className="px-2 pt-2 pb-4 space-y-1 bg-white border-t border-gray-100 rounded-b-lg shadow-lg max-h-[80vh] overflow-y-auto">
                   {navigation.map((item) => (
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block px-4 py-3 text-gray-600 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors duration-200 font-medium"
+                      className="block px-4 py-4 text-gray-600 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors duration-200 font-medium touch-target"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -145,7 +145,7 @@ export default function Header() {
                   ))}
                   <div className="pt-2 border-t border-gray-100">
                     <Link href="/iletisim">
-                      <Button size="sm" variant="default" className="w-full font-semibold">
+                      <Button size="sm" variant="default" className="w-full font-semibold touch-target">
                         Teklif Alın
                       </Button>
                     </Link>

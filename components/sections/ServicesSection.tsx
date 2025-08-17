@@ -25,7 +25,7 @@ export default function ServicesSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {services.slice(0, 8).map((service, index) => (
             <motion.div
               key={service.id}
@@ -49,12 +49,12 @@ export default function ServicesSection() {
                   <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
                     {service.title}
                   </h3>
-                  
-                  {/* Description */}
-                  <p className="text-gray-800 text-sm leading-relaxed group-hover:text-gray-900 transition-colors duration-300">
-                    {service.description}
-                  </p>
                 </div>
+                
+                {/* Description */}
+                <p className="text-gray-800 text-sm leading-relaxed group-hover:text-gray-900 transition-colors duration-300 text-left">
+                  {service.description}
+                </p>
               </div>
               
               {/* Hover Effect Border */}

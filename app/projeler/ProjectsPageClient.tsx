@@ -91,7 +91,7 @@ export default function ProjectsPageClient() {
               <h3 className="text-xl font-semibold text-gray-800">Filtreler</h3>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Kategori
@@ -99,7 +99,7 @@ export default function ProjectsPageClient() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent touch-target"
                 >
                   {categories.map(category => (
                     <option key={category.value} value={category.value}>
@@ -116,7 +116,7 @@ export default function ProjectsPageClient() {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent touch-target"
                 >
                   {statuses.map(status => (
                     <option key={status.value} value={status.value}>
@@ -149,7 +149,7 @@ export default function ProjectsPageClient() {
           </motion.div>
 
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {filteredProjects.map((project, index) => (
                 <motion.div
                   key={project.id}
@@ -245,7 +245,7 @@ export default function ProjectsPageClient() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8">
             {[
               { number: '7', label: 'Tamamlanan Proje' },
               { number: '1', label: 'Devam Eden Proje' },

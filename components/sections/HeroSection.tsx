@@ -18,8 +18,8 @@ const ConstructionHeroContent = () => {
           Vertex Yapı ile Geleceği İnşa Ediyoruz
         </h2>
         <p className='text-base sm:text-lg md:text-xl lg:text-2xl mb-8 sm:mb-12 text-gray-700 max-w-4xl sm:max-w-5xl mx-auto leading-relaxed px-4 sm:px-0'>
-          Mersin Silifke'den Türkiye'ye, güvenli, dayanıklı ve estetik yapılar inşa ediyoruz. 
-          Fabrika, hastane, okul, otel ve ticari yapılarda uzmanlaşmış ekibimizle hizmetinizdeyiz.
+          Mersin Silifke'den Türkiye'ye, kaba inşaat alanında uzmanlaşmış ekibimizle güvenli ve sağlam yapılar inşa ediyoruz. 
+          Konut, hastane, eğitim kurumu, ticari yapı ve sosyal tesislerde "Güçlü temel, sağlam gelecek" anlayışıyla hizmetinizdeyiz.
         </p>
       </motion.div>
 

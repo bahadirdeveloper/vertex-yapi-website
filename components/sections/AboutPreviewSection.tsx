@@ -32,8 +32,9 @@ export default function AboutPreviewSection() {
               Vertex Yapı İnşaat
             </h2>
             <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-              Firmamız; kaba inşaat, altyapı ve nükleer tesis projelerinde uzmanlaşmış, 
-              kalite, güvenlik ve sürdürülebilirlik ilkelerini benimseyen bir mühendislik şirketidir.
+              Vertex Yapı İnşaat, kaba inşaat alanında uzmanlaşmış bir mühendislik firmasıdır. 
+              Üst yapı projelerinde güçlü teknik kadromuz ve modern uygulama yöntemlerimizle 
+              güvenli ve sağlam yapılar inşa ediyoruz.
             </p>
             
             <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">

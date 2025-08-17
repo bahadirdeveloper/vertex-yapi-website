@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 export default function ContactPageClient() {
@@ -156,130 +156,7 @@ export default function ContactPageClient() {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-800 mb-6">
-                Mesaj Gönderin
-              </h2>
-              <p className="text-lg text-gray-600">
-                Projeleriniz hakkında bilgi almak için formu doldurun.
-              </p>
-            </div>
 
-            <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Ad *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Soyad *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      E-posta *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                      Telefon
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Konu *
-                  </label>
-                  <select
-                    id="subject"
-                    name="subject"
-                    required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  >
-                    <option value="">Konu seçin</option>
-                    <option value="fabrika">Fabrika İnşaatı</option>
-                    <option value="hastane">Hastane İnşaatı</option>
-                    <option value="okul">Okul İnşaatı</option>
-                    <option value="otel">Otel İnşaatı</option>
-                    <option value="ticari">Ticari Yapı</option>
-                    <option value="diger">Diğer</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mesaj *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    placeholder="Projeniz hakkında detayları yazın..."
-                  ></textarea>
-                </div>
-
-                <div className="text-center">
-                  <Button
-                    type="submit"
-                    size="lg"
-                    variant="default"
-                    className="font-semibold"
-                  >
-                    <MessageCircle className="w-5 h-5 mr-2" />
-                    Mesaj Gönder
-                  </Button>
-                </div>
-              </form>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="section-padding">
