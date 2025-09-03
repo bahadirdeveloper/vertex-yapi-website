@@ -109,8 +109,10 @@ export default function Header() {
             <div className="md:hidden">
               <button
                 type="button"
-                className="text-gray-600 hover:text-orange-600 p-2 rounded-lg hover:bg-orange-50 transition-colors duration-200"
+                className="text-gray-600 hover:text-orange-600 p-3 rounded-lg hover:bg-orange-50 transition-colors duration-200 touch-target"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Menüyü aç"
+                aria-expanded={mobileMenuOpen}
               >
                 <span className="sr-only">Menüyü aç</span>
                 {mobileMenuOpen ? (
@@ -137,7 +139,7 @@ export default function Header() {
                     <Link
                       key={item.name}
                       href={item.href}
-                      className="block px-4 py-4 text-gray-600 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors duration-200 font-medium touch-target"
+                      className="block px-4 py-4 text-gray-600 hover:text-orange-600 hover:bg-orange-50 rounded-lg transition-colors duration-200 font-medium touch-target min-h-[44px] flex items-center"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.name}
@@ -145,7 +147,7 @@ export default function Header() {
                   ))}
                   <div className="pt-2 border-t border-gray-100">
                     <Link href="/iletisim">
-                      <Button size="sm" variant="default" className="w-full font-semibold touch-target">
+                      <Button size="sm" variant="default" className="w-full font-semibold touch-target min-h-[44px]">
                         Teklif Alın
                       </Button>
                     </Link>

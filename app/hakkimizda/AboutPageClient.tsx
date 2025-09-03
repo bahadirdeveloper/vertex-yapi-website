@@ -27,10 +27,10 @@ export default function AboutPageClient() {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
               Hakkımızda
             </h1>
-            <p className="text-xl max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4 sm:px-0">
               Kaba inşaat alanında uzmanlaşmış, üst yapı projelerinde güçlü teknik kadrosu ve modern uygulama yöntemleriyle güvenli ve sağlam yapılar inşa eden bir mühendislik firması.
             </p>
           </motion.div>
@@ -40,7 +40,7 @@ export default function AboutPageClient() {
       {/* Company Info */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -215,7 +215,7 @@ export default function AboutPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {/* Kalite */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -329,7 +329,7 @@ export default function AboutPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 icon: Building,

@@ -11,7 +11,7 @@ export default function WhatsAppButton() {
   return (
     <motion.button
       onClick={handleClick}
-      className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 z-50 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-3 sm:p-5 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-110 border-2 border-white/20 backdrop-blur-sm group touch-target"
+      className="fixed bottom-3 sm:bottom-6 lg:bottom-8 right-3 sm:right-6 lg:right-8 z-50 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white p-3 sm:p-4 lg:p-5 rounded-2xl shadow-2xl transition-all duration-300 hover:scale-110 border-2 border-white/20 backdrop-blur-sm group touch-target min-h-[48px] min-w-[48px]"
       whileHover={{ scale: 1.1, rotate: 5 }}
       whileTap={{ scale: 0.95 }}
       initial={{ opacity: 0, y: 20 }}

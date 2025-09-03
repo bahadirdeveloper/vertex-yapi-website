@@ -16,10 +16,10 @@ export default function ContactPageClient() {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
               İletişim
             </h1>
-            <p className="text-xl max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4 sm:px-0">
               Projeleriniz için bizimle iletişime geçin. Size en uygun çözümü sunalım.
             </p>
           </motion.div>
@@ -29,7 +29,7 @@ export default function ContactPageClient() {
       {/* Contact Info */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -173,7 +173,7 @@ export default function ContactPageClient() {
             </h2>
           </motion.div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
+          <div className="max-w-4xl mx-auto space-y-4 sm:space-y-6">
             {[
               {
                 question: 'Hangi bölgelerde hizmet veriyorsunuz?',

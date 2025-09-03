@@ -290,7 +290,7 @@ const ScrollExpandMedia = ({
                 <div className='flex flex-col items-center text-center relative z-10 mt-4 transition-none'>
                   {date && (
                     <p
-                      className='text-2xl text-white font-bold drop-shadow-lg'
+                      className='text-sm sm:text-lg md:text-xl lg:text-2xl text-white font-bold drop-shadow-lg'
                       style={{ transform: `translateX(-${textTranslateX}vw)` }}
                     >
                       {date}
@@ -298,7 +298,7 @@ const ScrollExpandMedia = ({
                   )}
                   {scrollToExpand && (
                     <p
-                      className='text-white font-bold text-center drop-shadow-lg'
+                      className='text-xs sm:text-sm md:text-base lg:text-lg text-white font-bold text-center drop-shadow-lg'
                       style={{ transform: `translateX(${textTranslateX}vw)` }}
                     >
                       {scrollToExpand}
@@ -313,13 +313,13 @@ const ScrollExpandMedia = ({
                 }`}
               >
                 <motion.h2
-                  className='text-5xl md:text-6xl lg:text-7xl font-bold text-white transition-none drop-shadow-2xl'
+                  className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white transition-none drop-shadow-2xl'
                   style={{ transform: `translateX(-${textTranslateX}vw)` }}
                 >
                   {firstWord}
                 </motion.h2>
                 <motion.h2
-                  className='text-5xl md:text-6xl lg:text-7xl font-bold text-center text-white transition-none drop-shadow-2xl'
+                  className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-center text-white transition-none drop-shadow-2xl'
                   style={{ transform: `translateX(${textTranslateX}vw)` }}
                 >
                   {restOfTitle}
@@ -328,7 +328,7 @@ const ScrollExpandMedia = ({
             </div>
 
             <motion.section
-              className='flex flex-col w-full px-8 py-10 md:px-16 lg:py-20 bg-white/95 backdrop-blur-sm'
+              className='flex flex-col w-full px-4 sm:px-6 md:px-8 lg:px-16 py-8 sm:py-10 md:py-12 lg:py-20 bg-white/95 backdrop-blur-sm'
               initial={{ opacity: 0 }}
               animate={{ opacity: showContent ? 1 : 0 }}
               transition={{ duration: 0.7 }}

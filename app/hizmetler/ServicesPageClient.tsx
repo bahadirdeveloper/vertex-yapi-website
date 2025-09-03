@@ -15,10 +15,10 @@ export default function ServicesPageClient() {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
               Hizmetlerimiz
             </h1>
-            <p className="text-xl max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl max-w-3xl mx-auto px-4 sm:px-0">
               Uzmanlık alanlarımızda kaliteli ve güvenilir inşaat hizmetleri sunuyoruz.
             </p>
           </motion.div>
@@ -44,7 +44,7 @@ export default function ServicesPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -89,7 +89,7 @@ export default function ServicesPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 title: 'Sanayi Yapıları',
@@ -168,7 +168,7 @@ export default function ServicesPageClient() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 title: 'Deneyim',

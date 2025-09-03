@@ -16,16 +16,16 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 sm:mb-6">
             Hizmetlerimiz
           </h2>
-          <p className="text-xl text-gray-800 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-800 max-w-4xl mx-auto leading-relaxed px-4 sm:px-0">
             Uzmanlık alanlarımızda kaliteli ve güvenilir inşaat hizmetleri sunuyoruz. 
             Her projede en yüksek standartları hedefliyoruz.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {services.slice(0, 8).map((service, index) => (
             <motion.div
               key={service.id}
